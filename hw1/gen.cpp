@@ -6,10 +6,10 @@
 #include <cstdio>
 using namespace std;
 
-#define N 10
 int T;
 
-int main(){
+int main(int argc, char** argv){
+    int N = atoi(argv[1]);
     freopen("T", "r", stdin);
     std::cin >> T;
     fclose(stdin);
