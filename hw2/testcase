@@ -1,0 +1,24 @@
+0: (Sample)
+./MS_seq 12 -2 2 -2 2 400 400 ans
+time mpirun -np $((nodes*NUM_MPI_PROCESS_PER_NODE)) -ppn $NUM_MPI_PROCESS_PER_NODE -host $host ./MS_hybrid $OMP_NUM_THREADS -2 2 -2 2 400 400 out
+0.438s Correct
+
+1: (Skewed image)
+./MS_seq 12 -1.693624 0.1351 1.2321412 1.52623 400 612 ans
+time mpirun -np $((nodes*NUM_MPI_PROCESS_PER_NODE)) -ppn $NUM_MPI_PROCESS_PER_NODE -host $host ./MS_hybrid $OMP_NUM_THREADS -1.693624 0.1351 1.2321412 1.52623 400 612 out
+0.438s ReCorrect
+
+2: (Small image)
+./MS_seq 12 -2.45 1.22 -0.23 1.0241 30 60 ans
+time mpirun -np $((nodes*NUM_MPI_PROCESS_PER_NODE)) -ppn $NUM_MPI_PROCESS_PER_NODE -host $host ./MS_hybrid $OMP_NUM_THREADS -2.45 1.22 -0.23 1.0241 30 60 out
+Correct
+
+
+3: (Small image)
+time mpirun -np $((nodes*NUM_MPI_PROCESS_PER_NODE)) -ppn $NUM_MPI_PROCESS_PER_NODE -host $host ./MS_hybrid $OMP_NUM_THREADS -1.251 -1.25 -0.001 0.001 4000 4000 output_file
+
+4: (Origin image)
+time mpirun -np $((nodes*NUM_MPI_PROCESS_PER_NODE)) -ppn $NUM_MPI_PROCESS_PER_NODE -host $host ./MS_hybrid $OMP_NUM_THREADS -2 2 -2 2 4000 4000 out
+
+4: (Single Process)
+time mpirun -np $((nodes*NUM_MPI_PROCESS_PER_NODE)) -ppn $NUM_MPI_PROCESS_PER_NODE -host $host ./MS_hybrid $OMP_NUM_THREADS -2 2 -2 2 4000 4000 out

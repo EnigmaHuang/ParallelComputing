@@ -1,0 +1,26 @@
+1. 能否给出关于T, C, N的详细的数据范围？
+
+2. 在输出的时候是否要保证：如果A事件发生在B事件之前，那么一定要先输出A，再输出B？
+
+3. 单纯的使用系统时间(可能)是否可能会导致输出的结果出现问题？打个比方，如果我使用usleep(id)而不是usleep(id * 1000)的话，可能导致由于间隔的时间过短使得答案错误，所以问题就是：1ms是否是一个足够“大”的时间间隔？
+
+关于(3)中的一个例子：
+
+5 passengers, T=1, C=2, 一个错误的结果是：
+Passenger 1 wanders around the park.
+Passenger 2 wanders around the park.
+Passenger 3 wanders around the park.
+Passenger 4 wanders around the park.
+Passenger 5 wanders around the park.
+Passenger 1 returns for another ride at 1 microsecond.
+Passenger 2 returns for another ride at 2 microsecond.
+Passenger 3 returns for another ride at 3 microsecond.
+Passenger 4 returns for another ride at 4 microsecond.
+Passenger 5 returns for another ride at 5 microsecond.
+Car departures at 2 microsecond. Passenger 1 2 are in the car.
+Car arrives at 3 microsecond. Passenger 1 2 get off the car.
+Passenger 1 wanders around the park.
+Passenger 2 wanders around the park.
+Car departures at 4 microsecond. Passenger 3 4 are in the car.
+
+最后一行应该是Car departures at 3 microsecond. Passenger 3 1 are in the car. 这里的错误是由于时间间隔太小导致的，由于时间间隔太小，所以roller coaster thread更早接受到passenger thread 4的消息而不是passenger thread 1的消息，但是passenger 1在第3个微秒的时候已经在排队候车了。如果遇上这样的情况，一个改动较小的解决方案是等到所有人都发送了信息之后再排序取前C小的作为答案，但是这样的话可能会使得输出的结果不能保证(2)中叙述的情况，即可能把一个后发生的时间先输出。

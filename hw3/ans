@@ -1,0 +1,47 @@
+10 5 18 3
+Passenger 1 wanders around the park.
+Passenger 2 wanders around the park.
+Passenger 3 wanders around the park.
+Passenger 4 wanders around the park.
+Passenger 5 wanders around the park.
+Passenger 6 wanders around the park.
+Passenger 7 wanders around the park.
+Passenger 8 wanders around the park.
+Passenger 9 wanders around the park.
+Passenger 10 wanders around the park.
+Passenger 1 returns for another ride at 1 millisec.
+Passenger 2 returns for another ride at 2 millisec.
+Passenger 3 returns for another ride at 3 millisec.
+Passenger 4 returns for another ride at 4 millisec.
+Passenger 5 returns for another ride at 5 millisec.
+Car departures at 5 millisec. Passenger 1 2 3 4 5 are in the car.
+Passenger 6 returns for another ride at 6 millisec.
+Passenger 7 returns for another ride at 7 millisec.
+Passenger 8 returns for another ride at 8 millisec.
+Passenger 9 returns for another ride at 9 millisec.
+Passenger 10 returns for another ride at 10 millisec.
+Car arrives at 23 millisec. Passenger 1 2 3 4 5 get off the car.
+Car departures at 23 millisec. Passenger 6 7 8 9 10 are in the car.
+Passenger 1 wanders around the park.
+Passenger 2 wanders around the park.
+Passenger 3 wanders around the park.
+Passenger 4 wanders around the park.
+Passenger 5 wanders around the park.
+Passenger 1 returns for another ride at 24 millisec.
+Passenger 2 returns for another ride at 25 millisec.
+Passenger 3 returns for another ride at 26 millisec.
+Passenger 4 returns for another ride at 27 millisec.
+Passenger 5 returns for another ride at 28 millisec.
+Car arrives at 41 millisec. Passenger 6 7 8 9 10 get off the car.
+Car departures at 41 millisec. Passenger 1 2 3 4 5 are in the car.
+Passenger 6 wanders around the park.
+Passenger 7 wanders around the park.
+Passenger 8 wanders around the park.
+Passenger 9 wanders around the park.
+Passenger 10 wanders around the park.
+Passenger 6 returns for another ride at 47 millisec.
+Passenger 7 returns for another ride at 48 millisec.
+Passenger 8 returns for another ride at 49 millisec.
+Passenger 9 returns for another ride at 50 millisec.
+Passenger 10 returns for another ride at 51 millisec.
+Car arrives at 59 millisec. Passenger 1 2 3 4 5 get off the car.
